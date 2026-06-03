@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RhymeIt Blog — Songwriting Tips, Rhyme Guides &amp; Poetry Craft</title>
+  <meta name="description" content="The RhymeIt Blog covers songwriting tips, rhyme schemes, near rhymes, and lyric writing guides for songwriters, poets, and rappers." />
+  <link rel="canonical" href="https://blog.rhymeit.org/" />
+  <link rel="icon" type="image/svg+xml" href="https://rhymeit.org/favicon.svg" />
+
+  <meta property="og:title" content="RhymeIt Blog — Songwriting Tips and Rhyme Guides" />
+  <meta property="og:description" content="Songwriting tips, rhyme schemes, near rhymes, and lyric writing guides for songwriters, poets, and rappers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://blog.rhymeit.org/" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0E9YNHHBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S0E9YNHHBZ');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #faf9f7;
+      --bg-card: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #4a4a4a;
+      --text-muted: #777;
+      --accent: #c8922a;
+      --accent-light: #f5ecd7;
+      --border: #e8e3db;
+      --max-width: 860px;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+    }
+    .logo span { color: var(--accent); }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+    nav a:hover { color: #fff; }
+    nav a.active { color: #fff; }
+
+    .hero {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 3.5rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      color: #aaa;
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 1.5rem;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.65rem 1.75rem;
+      border-radius: 50px;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .hero-cta:hover { opacity: 0.85; }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .section-label {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.75rem;
+      margin-bottom: 4rem;
+    }
+
+    .article-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .article-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .card-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.9rem;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: bold;
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .card-excerpt {
+      font-family: Arial, sans-serif;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-meta {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card-meta .dot { color: var(--border); }
+    .card-read-more {
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+
+    .topics-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+    .topics-section h2 {
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .topics-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .topic-chip {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 0.35rem 1rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+    .topic-chip:hover {
+      background: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .tool-banner {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .tool-banner h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+    }
+    .tool-banner p {
+      color: #aaa;
+      font-family: Arial, sans-serif;
+      font-size: 0.92rem;
+      margin-bottom: 1.25rem;
+    }
+    .tool-banner a {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.7rem 2rem;
+      border-radius: 50px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 0.92rem;
+      text-decoration: none;
+    }
+    .tool-banner a:hover { opacity: 0.85; }
+
+    footer {
+      background: #1a1a1a;
+      color: #888;
+      text-align: center;
+      padding: 2rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header { padding: 1rem; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .hero { padding: 2.5rem 1.5rem 2rem; }
+      .tool-banner { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://rhymeit.org" class="logo">Rhyme<span>~it</span></a>
+  <nav>
+    <a href="https://rhymeit.org">Tool</a>
+    <a href="https://blog.rhymeit.org" class="active">Blog</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>The <span>RhymeIt</span> Blog</h1>
+  <p>Songwriting tips, rhyme guides, and lyric writing craft for songwriters, poets, and rappers.</p>
+  <a href="https://rhymeit.org" class="hero-cta">Find Rhymes Free →</a>
+</div>
+
+<main>
+
+  <div class="section-label">Latest Articles</div>
+
+  <div class="articles-grid">
+
+    <a href="https://blog.rhymeit.org/rhyme-schemes-explained/" class="article-card">
+      <span class="card-tag">Songwriting</span>
+      <div class="card-title">Rhyme Schemes Explained: AABB, ABAB, ABCB + Examples for Songs &amp; Poems</div>
+      <div class="card-excerpt">Learn the most common rhyme schemes used in songs and poems, including AABB, ABAB, ABCB, AAAA, and AABBA. Discover how to choose the right pattern for your writing.</div>
+      <div class="card-meta">
+        <span>June 2026</span>
+        <span class="dot">·</span>
+        <span>8 min read</span>
+        <span class="dot">·</span>
+        <span class="card-read-more">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://blog.rhymeit.org/what-is-a-near-rhyme/" class="article-card">
+      <span class="card-tag">Songwriting</span>
+      <div class="card-title">What Is a Near Rhyme? How Slant Rhymes Make Your Lyrics Better</div>
+      <div class="card-excerpt">Near rhymes and slant rhymes are the secret weapon of great songwriters. Learn what they are, how they work, and how to use them to write better, more original lyrics.</div>
+      <div class="card-meta">
+        <span>May 2026</span>
+        <span class="dot">·</span>
+        <span>6 min read</span>
+        <span class="dot">·</span>
+        <span class="card-read-more">Read →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="topics-section">
+    <h2>Browse by Topic</h2>
+    <div class="topics-grid">
+      <a href="https://rhymeit.org/rhymes-with/love" class="topic-chip">Rhymes with Love</a>
+      <a href="https://rhymeit.org/rhymes-with/heart" class="topic-chip">Rhymes with Heart</a>
+      <a href="https://rhymeit.org/rhymes-with/fire" class="topic-chip">Rhymes with Fire</a>
+      <a href="https://rhymeit.org/rhymes-with/night" class="topic-chip">Rhymes with Night</a>
+      <a href="https://rhymeit.org/rhymes-with/time" class="topic-chip">Rhymes with Time</a>
+      <a href="https://rhymeit.org/rhymes-with/dream" class="topic-chip">Rhymes with Dream</a>
+      <a href="https://rhymeit.org/rhymes-with/soul" class="topic-chip">Rhymes with Soul</a>
+      <a href="https://rhymeit.org/rhymes-with/pain" class="topic-chip">Rhymes with Pain</a>
+      <a href="https://rhymeit.org/rhymes-with/truth" class="topic-chip">Rhymes with Truth</a>
+      <a href="https://rhymeit.org/rhymes-with/rain" class="topic-chip">Rhymes with Rain</a>
+    </div>
+  </div>
+
+  <div class="tool-banner">
+    <h2>Find Rhymes for Any Word</h2>
+    <p>Search thousands of perfect and near rhymes organized by syllable count. Free, instant, no signup required.</p>
+    <a href="https://rhymeit.org">Try RhymeIt Free →</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 <a href="https://rhymeit.org">RhymeIt</a> &nbsp;&middot;&nbsp; Free rhyme finder for songwriters and poets</p>
+</footer>
+
+</body>
+</html>
