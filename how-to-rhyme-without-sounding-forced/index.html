@@ -23,12 +23,16 @@
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0E9YNHHBZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-S0E9YNHHBZ');
-  </script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-S0E9YNHHBZ', {
+       'linker': {
+         'domains': ['rhymeit.org', 'www.rhymeit.org', 'blog.rhymeit.org']
+       }
+     });
+   </script>
 
   <!-- Schema: Article -->
   <script type="application/ld+json">
